@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, } from '@angular/core';
 
 import { UtilService } from '../../services/util.service';
 
@@ -11,7 +11,6 @@ import { UtilService } from '../../services/util.service';
 export class HotelItemComponent implements OnInit {
 
   @Input() item: any;
-  @HostListener('window:resize', ['$event'])
 
 
   private url: string;
@@ -36,11 +35,5 @@ export class HotelItemComponent implements OnInit {
   arrayToNumber(num): number[] {
     return this.utilService.arrayToNumber(num);
   }
-
-  onResize(event) {
-   // this.introText = window.innerWidth < 1080 ? "New" : "Welcome";
-   console.log(event)
-  }
-
 
 }

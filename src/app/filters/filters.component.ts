@@ -18,12 +18,13 @@ export class FiltersComponent implements OnInit {
   private stars = [];
   private numberOfStars = 6;
 
-
+  private isResponsive: boolean;
 
 
   constructor(private utilService: UtilService) {
     //this.stars = Array(this.numberOfStars).fill().map((x,i)=>i);
     this.stars = [5,4,3,2,1]
+    this.isResponsive = this.isResponsiveFunc(window.screen.width);
   }
 
   ngOnInit() {
@@ -71,5 +72,14 @@ export class FiltersComponent implements OnInit {
   arrayToNumber(number) {
     return this.utilService.arrayToNumber(number);
   }
+
+
+  onResize(event) {
+    this.isResponsive = this.isResponsiveFunc(event.target.innerWidth);
+   }
+
+   isResponsiveFunc(screenWidth){
+     return screenWidth < 768;
+   }
 
 }

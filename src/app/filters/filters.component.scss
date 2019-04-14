@@ -21,6 +21,8 @@
       align-items: center;
       height: 100%;
       font-weight: bold;
+      width: 100%;
+      padding-left: 3%;
     }
   }
   .filters-stars{
@@ -108,3 +110,16 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .filters {
+    .filters-header {
+      justify-content: center;
+      p {
+        width: unset;
+        padding-left: unset;
+        padding-right: 10px;
+        color: #2B68B5;
+      }
+    }
+  }
+}

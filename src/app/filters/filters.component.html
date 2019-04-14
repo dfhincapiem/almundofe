@@ -1,8 +1,10 @@
-<div class="filters">
+<div class="filters" (window:resize)="onResize($event)">
   <div class="filters-header">
     <p>
-      Filtros
+      {{ isResponsive ? 'Filtrar' : 'Filtros' }}
     </p>
+    <div *ngIf="isResponsive" (click)="collapseSearchToggle()" class="arrow" [class.rotate-arrow]="collapseSearch"></div>
+
   </div>
   <div class="filters-search">
     <div class="search-header">
