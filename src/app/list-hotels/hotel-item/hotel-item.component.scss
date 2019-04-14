@@ -6,6 +6,7 @@
   height: 200px;
   display: flex;
   padding: 10px 0px;
+  box-shadow: 1px 1px 0px 0.1px rgba(203,203,203,0.39);
   .image-item {
     img {
       height: 100%;
@@ -75,7 +76,7 @@
 
 }
 
-@media screen and (min-width: 992px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 1400px) {
   .hotel-item {
     .price-item {
       button.btn-info {
@@ -104,9 +105,12 @@
       border-left: none;
       border-top: 1px dashed #CBCBCB;
       padding-top: 15px;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       p br{
         display: none;
+      }
+      button.btn-info {
+        width: 100%
       }
     }
   }

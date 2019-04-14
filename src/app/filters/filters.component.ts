@@ -69,9 +69,9 @@ export class FiltersComponent implements OnInit {
    }
 
    isResponsiveFunc(screenWidth){
-     const bool = screenWidth < 768;
-     if(!bool) this.isFiltersOpened = true;
-     return bool;
+     const isResponsiveScreen = screenWidth < 768;
+     this.isFiltersOpened = !isResponsiveScreen;
+     return isResponsiveScreen;
    }
    collapseFiltersResponsive() {
       this.isFiltersOpened  = !this.isFiltersOpened;
