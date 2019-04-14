@@ -1,0 +1,36 @@
+<div class="filters">
+  <div class="filters-header">
+    <p>
+      Filtros
+    </p>
+  </div>
+  <div class="filters-search">
+    <div class="search-header">
+        <img src="../../assets/icons/filters/search2.svg">
+        <h1 class="header-filter">Nombre de hotel</h1>
+        <div (click)="collapseSearchToggle()" class="arrow" [class.rotate-arrow]="collapseSearch"></div>
+    </div>
+    <div class="search-panel" [class.hide]="collapseSearch">
+      <input type="text" class="form-control" placeholder="Ingrese el nombre del hotel" #searchHotel>
+      <input type="button" class="btn-info" value="Aceptar" (click)="getSearchData(searchHotel.value)">
+    </div>
+  </div>
+  <div class="filters-stars">
+    <div class="search-header">
+        <img src="../../assets/icons/filters/star.svg">
+        <h1 class="header-filter">Estrellas</h1>
+        <div (click)="collapseStarsToggle()" class="arrow" [class.rotate-arrow]="collapseStars"></div>
+    </div>
+    <div class="checkbox-panel" [class.hide]="collapseStars">
+        <div class="all-stars">
+          <input (change)="onlyOne(inputValue)" type="checkbox" name="check" id="cbox0" value="0" checked #inputValue>
+          <label for="cbox0">Todas las estrellas</label>
+        </div>
+        <div *ngFor="let star of stars" class="star-selection">
+          <input (change)="onlyOne(inputValue)" type="checkbox" name="check" value="{{star}}" id="cbox{{star}}" #inputValue>
+          <img *ngFor="let item of arrayToNumber(star)" src="../../assets/icons/filters/star2.svg">
+        </div>
+    </div>
+
+  </div>
+</div>

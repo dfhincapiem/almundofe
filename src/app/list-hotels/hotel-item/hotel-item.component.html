@@ -1,0 +1,22 @@
+<div class="hotel-item row" >
+    <div class="image-item col-md-4">
+      <img src="{{this.url}}{{item.image}}" />
+    </div>
+    <div class="description-item col-md-5">
+      <p>{{item.name}}</p>
+      <div class="hotel-stars">
+        <img *ngFor="let star of arrayToNumber(item.stars)"  src="../../../assets/icons/filters/star2.svg" width="18px" heihgt="18px">
+      </div>
+      <div class="amenities-icons">
+        <img *ngFor="let amenity of item.amenities" src="../../../assets/icons/amenities/{{amenity}}.svg" width="20px" height="20px">
+      </div>
+    </div>
+    <div class="price-item col-md-3 text-center" >
+      <p>Precio por noche por<br> habitacion</p>
+      <div class="price">
+      <h3>ARS </h3>
+      <h3>{{item.price}}</h3>
+      </div>
+      <button class="btn-info">Ver hotel</button>
+    </div>
+</div>

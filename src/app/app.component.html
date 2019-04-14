@@ -1,0 +1,15 @@
+<header>
+  <img src="../assets/images/logo-almundo.svg" >
+</header>
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4">
+        <app-filters (searchStarsEvent)="getHotelStarsData($event)" (searchEvent)="getHotelSearchData($event)"></app-filters>
+      </div>
+      <div class="col-lg-8">
+        <app-list-hotels [listData]="data"></app-list-hotels>
+      </div>
+    </div>
+  </div>
+</main>

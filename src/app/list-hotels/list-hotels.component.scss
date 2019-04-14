@@ -1,0 +1,8 @@
+/deep/ pagination-controls {
+  li.pagination-next, li.pagination-previous{
+    display: none;
+  }
+  .ngx-pagination li.current{
+    background: #2D2385;
+  }
+}
