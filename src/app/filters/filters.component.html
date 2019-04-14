@@ -3,10 +3,9 @@
     <p>
       {{ isResponsive ? 'Filtrar' : 'Filtros' }}
     </p>
-    <div *ngIf="isResponsive" (click)="collapseSearchToggle()" class="arrow" [class.rotate-arrow]="collapseSearch"></div>
-
+    <div *ngIf="isResponsive" (click)="collapseFiltersResponsive()" class="arrow" [class.rotate-arrow]="!isFiltersOpened"></div>
   </div>
-  <div class="filters-search">
+  <div *ngIf="isFiltersOpened" class="filters-search">
     <div class="search-header">
         <img src="../../assets/icons/filters/search2.svg">
         <h1 class="header-filter">Nombre de hotel</h1>
@@ -17,7 +16,7 @@
       <input type="button" class="btn-info" value="Aceptar" (click)="getSearchData(searchHotel.value)">
     </div>
   </div>
-  <div class="filters-stars">
+  <div *ngIf="isFiltersOpened" class="filters-stars">
     <div class="search-header">
         <img src="../../assets/icons/filters/star.svg">
         <h1 class="header-filter">Estrellas</h1>

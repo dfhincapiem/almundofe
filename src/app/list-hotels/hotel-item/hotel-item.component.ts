@@ -20,17 +20,10 @@ export class HotelItemComponent implements OnInit {
 
   constructor(private utilService: UtilService) {
     this.url = '../assets/images/hotels/';
-    /// this.getScreenSize();
   }
 
   ngOnInit() {
   }
-
-  // getScreenSize(event?) {
-  //   this.screenHeight = window.innerHeight;
-  //   this.screenWidth = window.innerWidth;
-  //   console.log(this.screenHeight, this.screenWidth);
-  // }
 
   arrayToNumber(num): number[] {
     return this.utilService.arrayToNumber(num);
