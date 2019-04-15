@@ -1,9 +1,9 @@
-<!-- <div class="list-hotels">
-  <div class="item-hotel" *ngFor="let item of listData;">
-    <app-hotel-item [item]="item" ></app-hotel-item>
-  </div>
-</div> -->
 <div class="list-hotels">
+  <div *ngIf="listData.length === 0">
+    <h1>
+      No data FOUND
+    </h1>
+  </div>
   <div *ngFor="let item of listData  | paginate: { itemsPerPage: 10, currentPage: p }">
     <app-hotel-item [item]="item" ></app-hotel-item>
   </div>

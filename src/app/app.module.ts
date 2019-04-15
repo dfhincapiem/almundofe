@@ -4,9 +4,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListHotelsComponent } from './list-hotels/list-hotels.component';
-import { FiltersComponent } from './filters/filters.component';
-import { HotelItemComponent } from './list-hotels/hotel-item/hotel-item.component';
+import { ListHotelsComponent } from './components/list-hotels/list-hotels.component';
+import { FiltersComponent } from './components/filters/filters.component';
+import { HotelItemComponent } from './components/list-hotels/hotel-item/hotel-item.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
 import { DeviceDetectorModule } from 'ngx-device-detector';

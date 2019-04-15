@@ -30,11 +30,17 @@ export class AppComponent {
   }
 
   getHotelSearchData(eventHotel) {
+    if(eventHotel === '') {
+      this.getHotelList();
+    }
+    else {
     this.hotelListService
     .getSearchHotels(eventHotel)
       .subscribe(
         (data)=>{this.data = data;}
       )
+    }
+
   }
   getHotelStarsData(eventStarsHotel){
     if(eventStarsHotel === '0') {
@@ -45,7 +51,6 @@ export class AppComponent {
     .getSearchStarsHotels(eventStarsHotel)
       .subscribe(
         (data)=>{
-          console.log(data);
           this.data = data;
         }
       )

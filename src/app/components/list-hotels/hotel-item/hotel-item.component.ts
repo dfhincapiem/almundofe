@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, } from '@angular/core';
 
-import { UtilService } from '../../services/util.service';
+import { UtilService } from '../../../services/util.service';
 
 
 @Component({

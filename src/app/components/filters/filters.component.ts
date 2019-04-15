@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { UtilService } from '../services/util.service';
+import { UtilService } from '../../services/util.service';
 
 @Component({
   selector: 'app-filters',
