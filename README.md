@@ -7,4 +7,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. git clone https://github.com/dfhincapiem/almundofe
 2. locate at the folder and type "npm install"
 3. Then type "ng serve"
-4. Open up the address: https://localhost:4000
+4. Open up the address: http://localhost:4000
